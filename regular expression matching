@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1)
+            var pn = "+917979097007"
+            const re = /[+91][0-9]{10}/;
+            console.log(pn.match(re));
+            var ea="pkmpkm123@gmail.com"
+            const re1=/([a-z0-9])+@[a-z]+[.][a-z]+([.][a-z]+)*/i;
+            console.log(ea.match(re1));
+    </script>
+</body>
+</html>
