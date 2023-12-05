@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+      Enter the value :  <input type="text" id="inp">
+      <input type="button"  value="Push" id="push">
+     <input type="button" value="Pop"    id="pop"><br><br>
+     <textarea value="" rows="20" cols="40" id="output"></textarea>
+    </form>
+      <script>
+      let arr = [];
+      document.getElementById("push").addEventListener("click",(e)=>{
+        getVal=document.getElementById("inp").value;
+        arr.push(getVal);
+        document.getElementById("output").value=arr;
+        document.getElementById("inp").value=null;
+      })
+      document.getElementById("pop").addEventListener("click",(e)=>{
+        getVal=document.getElementById("inp").value;
+        arr.pop();
+        document.getElementById("output").value=arr;
+        document.getElementById("inp").value=null;
+      })
+      
+
+    </script>
+    </body>
+</html>
