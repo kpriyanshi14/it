@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="inp" type="number" placeholder="enter a number" />
+    <button id="btn" type="submit">submit</button>
+    <button id="sortout">show sorted array on console</button>
+    <script>
+      var arr = [];
+      var k = 0;
+      function bubbleSort(arr1) {
+        var i, j;
+        var len = arr1.length;
+
+        var isSwapped = false;
+
+        for (i = 0; i < len; i++) { 
+          isSwapped = false;
+
+          for (j = 0; j < len - i - 1; j++) {
+            if (arr1[j] > arr1[j + 1]) {
+              var temp = arr1[j];
+              arr1[j] = arr1[j + 1];
+              arr1[j + 1] = temp;
+              isSwapped = true;
+            }
+          }
+
+          // IF no two elements were swapped
+          // by inner loop, then break
+          if (!isSwapped) {
+            break;
+          }
+        }
+
+        // Print the array
+        console.log(arr1);
+      }
+      var ele = document.getElementById("btn");
+      ele.addEventListener("click", function () {
+        var val = document.getElementById("inp").value;
+        arr[k] = val;
+        k++;
+        document.getElementById("inp").value = "";
+        console.log(arr);
+      });
+      var sor = document.getElementById("sortout");
+      sor.addEventListener("click", function () {
+        bubbleSort(arr);
+      });
+    </script>
+  </body>
+</html>
